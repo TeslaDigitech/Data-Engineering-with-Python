@@ -1,3 +1,16 @@
+# This Python code uses the Elasticsearch library to scroll through a large number of documents in an Elasticsearch index. The code follows these steps:
+
+# Import the Elasticsearch library
+# Create an Elasticsearch instance
+# Execute a search query on the Elasticsearch instance to fetch the first batch of documents
+# Print the '_source' field of the fetched documents
+# Store the scroll ID and the total number of documents found
+# Start scrolling through the remaining documents
+# Fetch the next batch of documents using the scroll ID
+# Update the scroll ID and the number of documents in the current batch
+# Print the '_source' field of the fetched documents in the current batch
+# Repeat steps 7-9 until all documents are fetched
+
 # Import the Elasticsearch library
 from elasticsearch import Elasticsearch
 
