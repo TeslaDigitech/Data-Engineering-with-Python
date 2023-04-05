@@ -1,3 +1,9 @@
+# Purpose:
+# This Python script is used for validating the data in a CSV file using the Great Expectations library. 
+# It configures a DataContext with a provided Great Expectations configuration, gets an expectation suite, 
+# and sets up batch_kwargs for reading the CSV file. The script then gets a batch to validate, runs the validation operator on the batch, 
+# and checks the success status of the validation results. Finally, the script prints the appropriate JSON response (pass or fail) based on the success status.
+
 import sys
 from great_expectations import DataContext
 
