@@ -1,3 +1,7 @@
+# The purpose of this Python script is to run a Great Expectations checkpoint that validates a single batch of data from the "staging" table 
+# in the "public" schema of the "stagingtable" datasource. The validation results are saved to the results store and Data Docs are updated. 
+# If the validation fails, it prints '{"result":"fail"}' and exits with a non-zero status code; otherwise,
+# it prints '{"result":"pass"}' and exits with a zero status code.
 """
 A basic generated Great Expectations checkpoint that validates a single batch of data.
 
