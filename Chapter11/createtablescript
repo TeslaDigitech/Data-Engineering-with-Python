@@ -1,9 +1,16 @@
+Purpose:
+The purpose of this SQL script is to create a new table called 'staging' in the 'public' schema of a PostgreSQL database. The table has columns for user ID, 
+name, age, street, city, state, and zip code. The user ID column is set as the primary key.
+The table is created with specific properties and the ownership is set to the 'postgres' user.
+
 -- Table: public.staging
 
 -- DROP TABLE public.staging;
 
+-- Create a new table named 'staging' in the 'public' schema
 CREATE TABLE public.staging
 (
+    -- Define columns for the table
     userid bigint NOT NULL,
     name text COLLATE pg_catalog."default",
     age integer,
@@ -11,13 +18,17 @@ CREATE TABLE public.staging
     city text COLLATE pg_catalog."default",
     state text COLLATE pg_catalog."default",
     zip text COLLATE pg_catalog."default",
+    
+    -- Add a primary key constraint on the 'userid' column
     CONSTRAINT staging_pkey PRIMARY KEY (userid)
-
 )
+-- Define table properties
 WITH (
     OIDS = FALSE
 )
 TABLESPACE pg_default;
 
+-- Set the table owner to 'postgres'
 ALTER TABLE public.staging
     OWNER to postgres;
+
