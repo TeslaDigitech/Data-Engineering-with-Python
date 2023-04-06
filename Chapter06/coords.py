@@ -1,3 +1,9 @@
+# Purpose:
+# The script is designed to be used in an Apache NiFi ExecuteScript processor.
+# It reads the content of a flowFile, modifies the JSON object by adding 'coords' and 'opendate' fields,
+# and writes the modified JSON object back to the flowFile. If any error occurs during the process,
+# it transfers the flowFile to the 'REL_FAILURE' relationship, otherwise to the 'REL_SUCCESS' relationship.
+
 import urllib
 import urllib2
 import json
