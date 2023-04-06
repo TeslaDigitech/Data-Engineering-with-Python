@@ -1,3 +1,7 @@
+# Purpose: The purpose of this script is to fetch data from the SeeClickFix API, parse the JSON response, 
+# and write the data to an outputStream in Apache NiFi. The script handles any errors that occur during processing and
+# transfers the flowFile to the appropriate relationship in NiFi (either REL_FAILURE or REL_SUCCESS).
+  
 # Import required libraries
 import urllib
 import urllib2
